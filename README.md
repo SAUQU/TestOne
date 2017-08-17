@@ -27,32 +27,34 @@ Wrap_content which means that the view wants to be just big enough to enclose it
 
 6.	How can you setup a method for a button click without binding the view?
 
+alt+enter then it will give u an opion where u can chose to implement the method.
+
 
 7.	How can you define a button click method with binding the button view?
+
+Declare the button, bind the button, and then set onClickListener method
 
 
 
 8.	How can you change the color of the TextView?
 
-Android:textcolor=”color_purple”>
+Android:background="color_purple”>
 
 
 9.	Where are all the colors in the android architecture saved?
-
-In the libraries?  Or in the application framework?
-
-
-
+in values inside xml.colors
 
 10.	How would you add a different layout for a landscape and a language? Name the 
 
 qualifiers.
-
+Under Values:
 Create a layout-land directory and put the landscape version layout XML file in that directory
+
 
 11.	How would you make the keyboard hide for EditText when the activity is created?
 
-android:configChanges="keyboardHidden|orientation">
+this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+//android:configChanges="keyboardHidden|orientation">
 
 12.	WHAT ARE VIEWGROUPS AND VIEWS?
 
@@ -65,11 +67,13 @@ You would need the orientation of each child since they are laying on top of eac
 
 14.	In which case you would use a Linear layout and a Relative layout?
 
-I would use linear layout for 
+I would use linear layout when you want to aling the element vertically or horizontally
 
-I would use relative layout for
+I would use relative layout when you want to have the elemnts on the side so left, right,center, middle, ect.
 
 15.	How would you load an image in an ImageView from xml and programmatically?
+
+
 
 
 16.	List all the states in an activity lifecycle.
@@ -131,7 +135,7 @@ Implicit intents don’t name a specific component instead they declare a genera
 
 28.	How to communicate data between activities?
 
-We can use a bundle and create a new intent 
+We can use a bundle and create a new intent or we can use content provider 
 
 29.	How to add data to an intent?
 First we have to attach the data to the intent object using a Bundle class. Then call the activity using startActivity() or startActivityForResult() methods.
